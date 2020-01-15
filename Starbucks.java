@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 /**
  * 
- * @author Dea Gjini
+ * @author Dea Gjini, Julia Liu, Jenny Xu
  */
 
 public class Starbucks {
@@ -19,7 +19,7 @@ public class Starbucks {
         ArrayList<OrderHistory> orders = new ArrayList<>();
         PaymentInfo paymentInfo = new PaymentInfo("12339827289783", "345", "09/07", "Deaya Gjini");
         cards.add(paymentInfo);
-        OrderHistory item = new OrderHistory(1.1, 1.1, 1); //work on theeese 
+        OrderHistory item = new OrderHistory(1.1, 1.1, 1);  
         orders.add(item);
         OrderHistory item1 = new OrderHistory(2.3, 4.5, 7);
         orders.add(item1);
@@ -27,7 +27,7 @@ public class Starbucks {
         PersonalInfo account = new PersonalInfo("Jenny", "Xu", "19 Grange Dr", "Richmond Hill", "L4E 4S9", "Ontario");
         PersonalInfo shipping = new PersonalInfo("Jenny", "Xu", "19 Grange Dr", "Richmond Hill", "L4E 4S9", "Ontario");
         PersonalInfo bill = new PersonalInfo("Jenny", "Xu", "19 Grange Dr", "Richmond Hill", "L4E 4S9", "Ontario");
-        accounts.add(new Account("1234pilaf", "June 28 2001", "jenny.xu19@ycdsbk12.ca", account, shipping, membershipInfo, orders, cards, bill));
+        accounts.add(new Account("1234", "June 28 2001", "jenny.xu19@ycdsbk12.ca", account, shipping, membershipInfo, orders, cards, bill));
 
         //Account 2
         ArrayList<PaymentInfo> cards2 = new ArrayList<>();
@@ -55,7 +55,7 @@ public class Starbucks {
         PersonalInfo account3 = new PersonalInfo("Dea", "Gjini", "24 Hearthside Ave", "Richmond Hill", "L4E 4K2", "Ontario");
         PersonalInfo shipping3 = account3;
         PersonalInfo bill3 = account3;
-        accounts.add(new Account("imaloser", "January 7 2018", "dea.gjini19@ycdsbk12.ca", account3, shipping3, membershipInfo3, orders3, cards3, bill3));
+        accounts.add(new Account("umathurman123", "January 7 2018", "dea.gjini19@ycdsbk12.ca", account3, shipping3, membershipInfo3, orders3, cards3, bill3));
 
         menu(accounts);
     }
@@ -293,7 +293,7 @@ public class Starbucks {
         }
 
         if (check != 2) {
-            System.out.println("\nThis ain't it chief");
+            System.out.println("\nHmm... seems like the account you looked for is not here.");
         }
 
         backPrompt(accounts);
